@@ -1,9 +1,21 @@
-import React from "react";
+/*import Navbar from "./components/navbar/Navbar";
+import Hero from "./sections/Hero/Hero";
+import Programs from "./sections/Programs/Programs";
+import Benefits from "./sections/Benefits/Benefits";
+import About from "./sections/About/About";
+import Contact from "./sections/Contact/Contact";
+import Footer from "./components/Footer/Footer";*/
 
 function App() {
     return (
         <>
-            <h1>Préparation Concours Infirmier</h1>
+            <Navbar />
+            <Hero />
+            <Programs />
+            <Benefits />
+            <About />
+            <Contact />
+            <Footer />
         </>
     );
 }
