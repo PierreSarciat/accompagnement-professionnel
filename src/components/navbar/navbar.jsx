@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './navbar.scss';
+import logo from '@logo/logo.png';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -20,23 +21,33 @@ const Navbar = () => {
         <div className={`navbar-container ${scrolled ? 'scrolled' : ''}`}>
             <nav>
                 <ul>
-                    <li>
-                        <div className="nav1">
-                            <a href="#portfolio">Portfolio</a>
-                        </div>
-                    </li>
-                    <li className="nav2">
-                        <a href="#competences">Compétences</a>
-                    </li>
-                    <li className="nav2">
-                        <a href="#about">À propos</a>
-                    </li>
-                    <li className="nav2">
-                        <a href="#projets">Projets</a>
-                    </li>
-                    <li className="nav2">
-                        <a href="#contact">Contact</a>
-                    </li>
+                    <div className="nav1">
+                        <li>
+
+                            <img src={logo} alt="Logo soutien professionnel" className="logonav" />
+                            <a href="#delphinerivier">Delphine Rivier</a>
+
+                        </li>
+                    </div>
+
+                    <div className="nav2">
+
+                        <li>
+                            <a href="#competences1">Compétences1</a>
+                        </li>
+                        <li>
+                            <a href="#competences2">Compétences2</a>
+                        </li>
+                        <li>
+                            <a href="#competences3">Compétences3</a>
+                        </li>
+                        <li>
+                            <a href="#about">À propos</a>
+                        </li>
+                        <li >
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </div>
                 </ul>
             </nav>
         </div>
