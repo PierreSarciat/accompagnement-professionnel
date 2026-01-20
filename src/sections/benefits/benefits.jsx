@@ -43,7 +43,7 @@ const benefitsData = [
 
 const Benefits = () => {
     return (
-        <section className="benefits">
+        <section className="section">
             <h2 className="benefits__title">Nos Avantages</h2>
             <p className="benefits__subtitle">
                 Découvrez pourquoi nos programmes font la différence pour votre carrière.

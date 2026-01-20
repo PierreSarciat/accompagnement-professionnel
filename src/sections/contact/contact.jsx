@@ -33,7 +33,7 @@ const Contact = () => {
     };
 
     return (
-        <section className="contact">
+        <section className="section">
             <h2 className="contact__title">Contactez-moi</h2>
             <p className="contact__subtitle">
                 Vous avez une question ou souhaitez en savoir plus sur mes programmes ?

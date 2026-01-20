@@ -28,7 +28,7 @@ const programsData = [
 
 const Programs = () => {
     return (
-        <section className="programs">
+        <section className="section">
             <h2 className="programs__title">Nos Programmes</h2>
             <p className="programs__subtitle">
                 Découvrez nos programmes conçus pour répondre à vos besoins spécifiques.

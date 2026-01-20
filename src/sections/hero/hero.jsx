@@ -4,13 +4,13 @@ import './hero.scss';
 
 const Hero = () => {
     return (
-        <section>
+        <section className='section'>
             <div className="hero__content">
                 <h1 className="hero__title">
-                    Transformez votre carrière avec un accompagnement sur mesure
+                    Votre avenir professionnel commence ici. Transformez votre vie dès maintenant !
                 </h1>
                 <p className="hero__subtitle">
-                    Découvrez nos programmes pour booster votre développement professionnel et atteindre vos objectifs.
+                    Avec un accompagnement personnalisé, atteignez vos objectifs professionnels plus vite que vous ne l’imaginez.
                 </p>
 
             </div>
