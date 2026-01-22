@@ -10,10 +10,35 @@
 
     .hero__content {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 1240px;
+        grid-template-columns: 1fr 1fr;
         height: 100%;
         position: relative;
         z-index: 2;
+
+        .button-container {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .colonne1 {
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .colonne2 {
+            backdrop-filter: blur(6px);
+            border-bottom-left-radius: 60px;
+            border: 1px solid white;
+            text-align: center;
+            align-items: center;
+            display: flex;
+            padding: 15px;
+            margin: 200px 20px 20px 20px;
+        }
     }
 }
 
