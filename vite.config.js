@@ -7,7 +7,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@logo': fileURLToPath(new URL('./src/assets/logo', import.meta.url)), 
-      '@images': fileURLToPath(new URL('./src/assets/images', import.meta.url)), // Alias pour le dossier logo
+      '@images': fileURLToPath(new URL('./src/assets/images', import.meta.url)), 
+      '@components': fileURLToPath(new URL('./src/components', import.meta.url)), 
     },
   },
 });
