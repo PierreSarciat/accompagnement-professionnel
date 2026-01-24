@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './programs.scss';
+import Button from "@components/button/button.jsx";
 import ButtonP from "@components/button/button-programs.jsx";
 
 const programsData = [
@@ -62,12 +63,10 @@ const Programs = () => {
                     {selectedProgram && (
                         <div className="programs__description-container">
                             <p className="programs__item-description">{selectedProgram.description}</p>
-                            <div className="programs__item-details">
-                                <span className="programs__item-duration">{selectedProgram.duration}</span>
-                                <span className="programs__item-price">{selectedProgram.price}</span>
-                            </div>
+
                         </div>
                     )}
+                    <Button text="En savoir plus" />
                 </div>
 
             </div>
