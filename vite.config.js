@@ -9,6 +9,7 @@ export default defineConfig({
       '@logo': fileURLToPath(new URL('./src/assets/logo', import.meta.url)), 
       '@images': fileURLToPath(new URL('./src/assets/images', import.meta.url)), 
       '@components': fileURLToPath(new URL('./src/components', import.meta.url)), 
+      '@styles':fileURLToPath(new URL('./src/styles', import.meta.url)),
     },
   },
 });
