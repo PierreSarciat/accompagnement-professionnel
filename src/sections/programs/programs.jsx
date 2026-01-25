@@ -37,40 +37,42 @@ const Programs = () => {
     const selectedProgram = programsData.find(program => program.id === selectedProgramId);
 
     return (
-        <section className="section">
-            <div className='programs__content'>
-                <div className='programs'>
-                    <h2 className="programs__title">Nos Programmes</h2>
-                    <p className="programs__subtitle">
-                        Découvrez nos programmes conçus pour répondre à vos besoins spécifiques.
-                    </p>
-                </div>
-                <div className='programs__buttons__content'>
-                    <div className="programs__buttons">
-                        {programsData.map((program) => (
-                            <ButtonP
-                                key={program.id}
-                                text={program.title}
-                                href=""
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    handleButtonClick(program.id);
-                                }}
-                            />
-                        ))}
+        <div className='programs__background'>
+            <section className="section">
+                <div className='programs__content'>
+                    <div className='programs'>
+                        <h2 className="programs__title">Nos Programmes</h2>
+                        <p className="programs__subtitle">
+                            Découvrez nos programmes conçus pour répondre à vos besoins spécifiques.
+                        </p>
+                    </div>
+                    <div className='programs__buttons__content'>
+                        <div className="programs__buttons">
+                            {programsData.map((program) => (
+                                <ButtonP
+                                    key={program.id}
+                                    text={program.title}
+                                    href=""
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        handleButtonClick(program.id);
+                                    }}
+                                />
+                            ))}
+                        </div>
+
+                        {selectedProgram && (
+                            <div className="programs__description-container">
+                                <p className="programs__item-description">{selectedProgram.description}</p>
+
+                            </div>
+                        )}
+                        <Button text="En savoir plus" />
                     </div>
 
-                    {selectedProgram && (
-                        <div className="programs__description-container">
-                            <p className="programs__item-description">{selectedProgram.description}</p>
-
-                        </div>
-                    )}
-                    <Button text="En savoir plus" />
                 </div>
-
-            </div>
-        </section>
+            </section>
+        </div>
     );
 };
 

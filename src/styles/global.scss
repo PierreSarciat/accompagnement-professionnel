@@ -17,17 +17,16 @@ main {
 
 .main-content {
   /*max-width: 1240px;*/
-  padding-top: 80px; /* Ajustez cette valeur */
+  padding-top: 80px; 
 }
 
 .section {
-  min-height: 100vh; /* Hauteur minimale de 100% de la fenêtre */
+  min-height: 100vh; 
   display: flex;
-  flex-direction: column;
-  /*justify-content: center; *//* Centre le contenu verticalement */
-  align-items: center; /* Centre le contenu horizontalement (optionnel) */
-  padding: 50px 20px; /* Espacement interne pour éviter que le contenu ne colle aux bords */
-  box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
+  justify-content: center; 
+  /*align-items: center; */
+  padding: 50px; 
+  box-sizing: border-box; 
  /* width: 100%;  Largeur complète */
 }
   
