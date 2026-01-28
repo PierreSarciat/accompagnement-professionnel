@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import './navbar.scss';
 import logo from '@logo/logo.png';
 
@@ -25,7 +26,10 @@ const Navbar = () => {
                         <li>
 
                             <img src={logo} alt="Logo soutien professionnel" className="logonav" />
-                            <a href="#delphinerivier">Delphine Rivier</a>
+                            <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                Delphine Rivier
+                            </Link>
+
 
                         </li>
                     </div>
