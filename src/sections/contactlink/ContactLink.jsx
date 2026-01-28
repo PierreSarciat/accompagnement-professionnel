@@ -9,7 +9,9 @@ const ContactLink = () => {
                 Être accompagné change tout.</p>
 
             <p>Discutons ensemble de votre projet et de vos objectifs lors d'un premier entretien gratuit.</p>
-            <Link to="/contact"><Button text="Contactez-moi" href="" /></Link>
+            <Link to="/contact">
+                <Button text="Contactez-moi" href="" />
+            </Link>
         </div>
 
     );
