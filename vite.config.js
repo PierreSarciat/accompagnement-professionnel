@@ -10,6 +10,7 @@ export default defineConfig({
       '@images': fileURLToPath(new URL('./src/assets/images', import.meta.url)), 
       '@components': fileURLToPath(new URL('./src/components', import.meta.url)), 
       '@styles':fileURLToPath(new URL('./src/styles', import.meta.url)),
+      '@section':fileURLToPath(new URL('./src/sections', import.meta.url)),
     },
   },
 });
