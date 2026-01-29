@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const ContactLink = () => {
     return (
-        <div className=''>
+        <div className='' id="contact">
             <p>Vous préparer seul est possible.
                 Être accompagné change tout.</p>
 

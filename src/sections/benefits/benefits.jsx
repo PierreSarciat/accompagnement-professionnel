@@ -37,7 +37,7 @@ const benefitsData = [
 
 const Benefits = () => {
     return (
-        <div className='benefits__background'>
+        <div className='benefits__background' id="benefits">
             <section className="section">
                 <div className='benefits__content'>
                     <div className="benefits__list">

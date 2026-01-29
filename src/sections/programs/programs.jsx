@@ -37,7 +37,7 @@ const Programs = () => {
     const selectedProgram = programsData.find(program => program.id === selectedProgramId);
 
     return (
-        <div className='programs__background'>
+        <div className='programs__background' id="programs">
             <section className="section">
                 <div className='programs__content'>
                     <div className='programs'>

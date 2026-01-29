@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './hero.scss';
 import Button from "@components/button/button.jsx";
 
@@ -18,7 +19,9 @@ const Hero = () => {
                         </p>
                         <div className='button-container'>
                             <Button text="A propos" href="" />
-                            <Button text="Contactez-moi" href="" />
+                            <Link to="/contact">
+                                <Button text="Contactez-moi" href="" />
+                            </Link>
                         </div>
 
                     </div>

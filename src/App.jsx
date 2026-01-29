@@ -3,10 +3,12 @@ import Programs from "./sections/programs/programs.jsx";
 import Benefits from "./sections/benefits/benefits.jsx";
 import About from "./sections/about/about.jsx";
 import ContactLink from "./sections/contactlink/ContactLink.jsx";
+import ScrollToAnchor from './components/ScrollToAnchor';
 
 function App() {
     return (
         <>
+            <ScrollToAnchor />
             <Hero />
             <Programs />
             <Benefits />
