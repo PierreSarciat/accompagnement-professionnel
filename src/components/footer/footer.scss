@@ -1,0 +1,11 @@
+.footer__container {
+    display: flex;
+    color: white;
+    justify-content: center;
+    background-color: black;
+    padding: 10px 0px;
+    font-size: 14px;
+    gap: 10px;
+}
+
+@media (max-width: 600px) {}
