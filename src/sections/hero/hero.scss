@@ -43,17 +43,33 @@
 
         .button-container {
             display: flex;
-            padding: 20px;
             gap: 20px;
+            justify-content: center;
         }
 
         .colonne1 {
             margin: 20px;
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: space-between;
 
-            animation: slideUp 0.8s ease-out forwards;
+            >* {
+                opacity: 0;
+                animation: slideUp 0.8s ease-out forwards;
+            }
+
+            .hero__title {
+                animation-delay: 0.1s;
+            }
+
+            .hero__subtitle {
+                margin-bottom: 50px;
+                animation-delay: 0.3s;
+            }
+
+            .button-container {
+                animation-delay: 0.5s;
+            }
         }
 
         .colonne2 {
