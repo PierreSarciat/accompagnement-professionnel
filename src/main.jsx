@@ -7,6 +7,7 @@ import App from "./App.jsx";
 import Contact from "@section/contact/contact.jsx";
 
 import "@styles/global.scss";
+import "@styles/animations.scss"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

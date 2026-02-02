@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './hero.scss';
+
 import Button from "@components/button/button.jsx";
 
 
@@ -25,7 +26,7 @@ const Hero = () => {
                         </div>
 
                     </div>
-                    <div className='colonne2'>
+                    <div className='colonne2 animation-slide-left'>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lacus vitae nulla varius feugiat id non est. Ut ut velit dignissim, maximus massa eget, luctus velit. Cras vel odio non orci maximus scelerisque. In lobortis lacus lectus, sed ultricies odio maximus sit amet. Aliquam id facilisis arcu, vel iaculis urna. Cras aliquam arcu ex, mattis mattis nisl porta dapibus. </p>
                     </div>
 
