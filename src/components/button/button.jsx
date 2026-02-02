@@ -2,26 +2,39 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './button.scss';
 
-const Button = ({ text, to, href, onClick, type = 'button', isLink = false, isRouterLink = false }) => {
+const Button = ({
+    text,
+    to,
+    href,
+    onClick,
+    type = 'button',
+    isLink = false,
+    isRouterLink = false,
+    className = '',
+}) => {
+    const classes = `button ${className}`;
+
     if (isRouterLink) {
         return (
-            <Link to={to} className="button" onClick={onClick}>
+            <Link to={to} className={classes} onClick={onClick}>
                 {text}
             </Link>
         );
-    } else if (isLink) {
+    }
+
+    if (isLink) {
         return (
-            <a className="button" href={href} onClick={onClick}>
+            <a href={href} className={classes} onClick={onClick}>
                 {text}
             </a>
         );
-    } else {
-        return (
-            <button className="button" type={type} onClick={onClick}>
-                {text}
-            </button>
-        );
     }
+
+    return (
+        <button type={type} className={classes} onClick={onClick}>
+            {text}
+        </button>
+    );
 };
 
 export default Button;
