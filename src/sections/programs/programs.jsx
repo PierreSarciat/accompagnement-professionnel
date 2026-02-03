@@ -42,12 +42,13 @@ const Programs = () => {
         <div className='programs__background' id="programs" ref={programsRef}>
             <section className="section">
                 <div className='programs__content'>
-                    <div className={`programs ${isVisible ? 'animation-slide-up' : ''}`}>
+                    <div className={`programs ${isVisible ? 'is-visible' : ''}`}>
                         <h2 className="programs__title">Nos Programmes</h2>
                         <p className="programs__subtitle">
                             Découvrez nos programmes conçus pour répondre à vos besoins spécifiques.
                         </p>
                     </div>
+
                     <div className='programs__buttons__content'>
                         <div className={`programs__buttons ${isVisible ? 'animation-slide-left' : ''}`}>
                             {programsData.map((program) => (
@@ -68,7 +69,7 @@ const Programs = () => {
                                 <p className="programs__item-description">{selectedProgram.description}</p>
                             </div>
                         )}
-                        <Button className={`button__new__page ${isVisible ? 'animation-slide-right' : ''}`} text="En savoir plus" />
+                        <Button className={`button__new__page ${isVisible ? 'animation-slide-left' : ''}`} text="En savoir plus" />
                     </div>
                 </div>
             </section>
