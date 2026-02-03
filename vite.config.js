@@ -11,6 +11,7 @@ export default defineConfig({
       '@components': fileURLToPath(new URL('./src/components', import.meta.url)), 
       '@styles':fileURLToPath(new URL('./src/styles', import.meta.url)),
       '@section':fileURLToPath(new URL('./src/sections', import.meta.url)),
+      '@hooks':fileURLToPath(new URL('./src/hooks', import.meta.url)),
     },
   },
 });
