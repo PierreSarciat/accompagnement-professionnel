@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './benefits.scss';
+import { useInView } from '@hooks/useInView';
+
+
 
 // Exemple de données pour les avantages
 const benefitsData = [
@@ -36,19 +39,24 @@ const benefitsData = [
 ];
 
 const Benefits = () => {
+    const [listRef, isVisible] = useInView({ threshold: 0.3 });
     return (
         <div className='benefits__background' id="benefits">
             <section className="section">
                 <div className='benefits__content'>
-                    <div className="benefits__list">
-                        {benefitsData.map((benefit) => (
-                            <div key={benefit.id} className="benefits__item">
+                    <div ref={listRef} className='benefits__list'>
+                        {benefitsData.map((benefit, index) => (
+                            <div
+                                key={benefit.id}
+                                className={`benefits__item ${isVisible ? 'animation-slide-down' : ''}`}
+                                style={{ animationDelay: `${0.1 * (index + 1)}s` }} // delay dynamique
+                            >
                                 <h3 className="benefits__item-title">{benefit.title}</h3>
                                 <p className="benefits__item-description">{benefit.description}</p>
                             </div>
                         ))}
                     </div>
-                    <div className='benefits__presentation'>
+                    <div className={`benefits__presentation ${isVisible ? 'is-visible' : ''}`}>
                         <h2 className="benefits__title">Nos Avantages</h2>
                         <p className="benefits__subtitle">
                             Découvrez pourquoi nos programmes font la différence pour votre carrière.
