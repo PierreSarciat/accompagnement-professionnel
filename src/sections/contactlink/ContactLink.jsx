@@ -1,12 +1,18 @@
 import React from 'react';
 import Button from "@components/button/button.jsx";
 import { Link } from 'react-router-dom';
+import { useInView } from '@hooks/useInView';
 import './ContactLink.scss';
 
 const ContactLink = () => {
+    const [ref, isVisible] = useInView({ threshold: 0.3 });
     return (
         <section>
-            <div className='ContactLink__content' id="contact">
+            <div
+                ref={ref}
+                className={`ContactLink__content ${isVisible ? 'is-visible' : ''}`}
+                id="contact"
+            >
                 <h1>Vous préparer seul est possible.
                     Être accompagné change tout.</h1>
                 <p>Discutons ensemble de votre projet et de vos objectifs lors d'un premier entretien gratuit.</p>

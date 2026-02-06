@@ -1,10 +1,34 @@
 .ContactLink__content {
   max-width: 1240px;
-  margin: 30px auto;  
+  margin: 30px auto;
   display: flex;
   flex-direction: column;
-  align-items: center;     
+  align-items: center;
   padding: 20px 0 30px;
   border-bottom-left-radius: 60px;
   border: 1px solid black;
+
+  h1,
+  p,
+  a {
+    opacity: 0;
+  }
+
+  &.is-visible {
+    h1 {
+      animation: fadeSlideUp 1.5s ease-out forwards;
+      animation-delay: 0.5s;
+    }
+
+    p {
+      margin-bottom: 40px;
+      animation: fadeSlideUp 1.5s ease-out forwards;
+      animation-delay: 2s;
+    }
+
+    a {
+      animation: fadeSlideUp 1.5s ease-out forwards;
+      animation-delay: 3s;
+    }
+  }
 }
