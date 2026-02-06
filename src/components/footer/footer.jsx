@@ -1,5 +1,6 @@
 import React from "react";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
+
 import './footer.scss';
 
 
@@ -8,7 +9,9 @@ const Footer = () => {
     return (
         <div className="footer__container">
             <p>Delphine Rivier © 2026 COPYRIGHT </p>
-            <p>- Mentions légales -</p>
+            <Link to="/mentions-legales" className="footer-link">
+                - Mentions légales -
+            </Link>
             <p>Réalisation:CAPSTUDIO - </p>
 
         </div>
