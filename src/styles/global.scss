@@ -23,6 +23,17 @@ main {
   padding-top: 80px; 
 }
 
+.main-container {
+    width: 100vw;
+    background-image: url('@images/backgroundimage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     background-attachment: fixed;
+
+}
+
+
 .section {
   min-height: 100vh; 
   display: flex;

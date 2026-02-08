@@ -4,19 +4,15 @@
   left: 0;
   right: 0; // Étend le conteneur sur toute la largeur
   z-index: 1000;
-  padding: 0; // Supprime le padding du conteneur pour éviter les débordements
+  padding: 0; 
   box-sizing: border-box;
   color: black;
   transition: background-color 0.5s ease, box-shadow 0.5s ease-in-out;
 
-  // Fond transparent par défaut
-  background-color: rgba(85, 114, 146, 0.93);
 
   &.scrolled {
-    /* background-color: rgba(146, 146, 226, 0.5);*/
     backdrop-filter: blur(6px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    /*color: white;*/
   }
 
   nav {
