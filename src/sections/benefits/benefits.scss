@@ -1,18 +1,24 @@
 .benefits__background {
-   background-color: rgb(242, 242, 242);
+    background-color: rgb(242, 242, 242);
 
     .benefits__content {
         display: grid;
         grid-template-columns: 2fr 1fr;
         max-width: 1240px;
         gap: 30px;
-        margin-top: 15vh;;
+        margin-top: 15vh;
+        ;
 
         .benefits__presentation {
             margin-top: -100px;
 
+            .benefits__image {
+                width: 100%;
+            }
+
             .benefits__title,
-            .benefits__subtitle {
+            .benefits__subtitle,
+            .benefits__image {
                 opacity: 0;
             }
 
@@ -26,59 +32,63 @@
                     animation: slideLeft 0.5s ease-out forwards;
                     animation-delay: 0.2s;
                 }
+
+                .benefits__image {
+                    animation: slideLeft 0.8s ease-out forwards;
+                        animation-delay: 0.6s;
+                }
             }
         }
 
+    }
 
-        .benefits__list {
-            display: grid;
-            margin-top: 60px;
-            grid-template-columns: 1fr 1fr 1fr; // Deux colonnes de largeur égale
-            grid-template-rows: 1fr 1fr 1fr;
-            gap: 20px
+    .benefits__list {
+        display: grid;
+        margin-top: 60px;
+        grid-template-columns: 1fr 1fr 1fr; // Deux colonnes de largeur égale
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 20px
+    }
+
+    .benefits__item {
+        backdrop-filter: blur(6px);
+        border-bottom-left-radius: 60px;
+        border: 1px solid rgb(0, 0, 0);
+        text-align: center;
+        align-items: center;
+        padding: 10px;
+        opacity: 0;
+
+        &.animation-slide-down {
+            animation-name: slideDown;
+            animation-duration: 0.6s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-out;
         }
 
-        .benefits__item {
-            backdrop-filter: blur(6px);
-            border-bottom-left-radius: 60px;
-            border: 1px solid rgb(0, 0, 0);
-            text-align: center;
-            align-items: center;
-            padding: 10px;
-            opacity: 0;
-
-            &.animation-slide-down {
-                animation-name: slideDown;
-                animation-duration: 0.6s;
-                animation-fill-mode: forwards;
-                animation-timing-function: ease-out;
-            }
-
-            &:nth-child(1) {
-                animation-delay: 1.2s;
-            }
-
-            &:nth-child(2) {
-                animation-delay: 1.3s;
-            }
-
-            &:nth-child(3) {
-                animation-delay: 1.4s;
-            }
-
-            &:nth-child(4) {
-                animation-delay: 1.5s;
-            }
-
-            &:nth-child(5) {
-                animation-delay: 1.6s;
-            }
-
-            &:nth-child(6) {
-                animation-delay: 1.7s;
-            }
+        &:nth-child(1) {
+            animation-delay: 1.2s;
         }
 
+        &:nth-child(2) {
+            animation-delay: 1.3s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: 1.4s;
+        }
+
+        &:nth-child(4) {
+            animation-delay: 1.5s;
+        }
+
+        &:nth-child(5) {
+            animation-delay: 1.6s;
+        }
+
+        &:nth-child(6) {
+            animation-delay: 1.7s;
+        }
     }
 
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './benefits.scss';
+import benefitsImg from "@images/benefits__img.webp";
 import { useInView } from '@hooks/useInView';
 
 
@@ -61,6 +62,7 @@ const Benefits = () => {
                         <p className="benefits__subtitle">
                             Découvrez pourquoi nos programmes font la différence pour votre carrière.
                         </p>
+                        <img src={benefitsImg} alt="Illustration des avantages" className="benefits__image" />
                     </div>
                 </div>
             </section>
