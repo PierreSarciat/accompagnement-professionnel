@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './programs.scss';
 import Button from "@components/button/button.jsx";
 import ButtonP from "@components/button/button-programs.jsx";
+import programsImg from "@images/programs__img.jpg";
 import { useInView } from '@hooks/useInView';
 
 const programsData = [
@@ -47,6 +48,7 @@ const Programs = () => {
                         <p className="programs__subtitle">
                             Découvrez nos programmes conçus pour répondre à vos besoins spécifiques.
                         </p>
+                        <img src={programsImg} alt="Illustration des programmes" className="programs__image" />
                     </div>
 
                     <div className='programs__buttons__content'>

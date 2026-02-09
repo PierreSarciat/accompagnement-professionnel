@@ -15,18 +15,31 @@
         .programs {
             margin-top: -100px;
 
+            &__image {
+                width: 80%;
+            }
+
             &__title,
-            &__subtitle {
+            &__subtitle,
+            &__image {
                 opacity: 0;
             }
 
             &.is-visible {
-                .programs__title {
-                    animation: slideUp 0.5s ease-out forwards;
-                   
+
+                .programs {
+
+                    &__title {
+                        animation: slideUp 0.5s ease-out forwards;
+                    }
+
+                    &__image {
+                        animation: slideRight 0.8s ease-out forwards;
+                        animation-delay: 0.5s;
+                    }
                 }
 
-                .programs__subtitle {
+                &__subtitle {
                     animation: slideUp 0.5s ease-out forwards;
                     animation-delay: 0.2s;
                 }
