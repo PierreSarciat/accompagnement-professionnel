@@ -1,39 +1,41 @@
 .ContactLink__background {
-  background-color: white;
-}
-
-.ContactLink__content {
-  max-width: 1240px;
-  margin: 30px auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 0 30px;
-  border-bottom-left-radius: 60px;
-  border: 1px solid black;
+  background-color: rgb(242, 242, 242);
+  padding: 30px;
 
 
-  h1,
-  p,
-  a {
-    opacity: 0;
-  }
+  .ContactLink__content {
+    margin: 0 auto;
+    max-width: 1240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 30px;
+    border-bottom-left-radius: 60px;
+    border: 1px solid black;
 
-  &.is-visible {
-    h1 {
-      animation: fadeSlideUp 1.5s ease-out forwards;
-      animation-delay: 0.5s;
-    }
 
-    p {
-      margin-bottom: 40px;
-      animation: fadeSlideUp 1.5s ease-out forwards;
-      animation-delay: 2s;
-    }
-
+    h1,
+    p,
     a {
-      animation: fadeSlideUp 1.5s ease-out forwards;
-      animation-delay: 3s;
+      opacity: 0;
+    }
+
+    &.is-visible {
+      h1 {
+        animation: fadeSlideUp 1.5s ease-out forwards;
+        animation-delay: 0.5s;
+      }
+
+      p {
+        margin-bottom: 40px;
+        animation: fadeSlideUp 1.5s ease-out forwards;
+        animation-delay: 2s;
+      }
+
+      a {
+        animation: fadeSlideUp 1.5s ease-out forwards;
+        animation-delay: 3s;
+      }
     }
   }
 }

@@ -18,10 +18,7 @@ main {
   
 }
 
-.main-content {
-  /*max-width: 1240px;*/
-  padding-top: 80px; 
-}
+
 
 .main-container {
     width: 100vw;
@@ -38,7 +35,7 @@ main {
   min-height: 100vh; 
   display: flex;
   justify-content: center; 
-  /*align-items: center; */
+  align-items: center; 
   padding: 50px; 
   box-sizing: border-box; 
  /* width: 100%;  Largeur complète */
