@@ -1,5 +1,6 @@
 import React from 'react';
 import './about.scss';
+import aboutImg from "@images/about__img.jpg";
 import { useInView } from '@hooks/useInView';
 
 const About = () => {
@@ -17,6 +18,7 @@ const About = () => {
                     >
                         <h2>Qui suis-je ?</h2>
                         <h1>Delphine Rivier</h1>
+                        <img src={aboutImg} alt="Delphine Rivier" className="about__image" />
                     </div>
 
                     <div
