@@ -1,40 +1,26 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import ContactForm from '@components/contact/contactForm.jsx';
+import { useInView } from '@hooks/useInView';
 import './contact.scss';
 
 
 
 const Contact = ({ contactEmail, contactPhone, contactLocalisation }) => {
-    const [isMerged, setIsMerged] = useState(false);
-    const contactRef = useRef(null);
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsMerged(true);
-                    observer.unobserve(entry.target);
-                }
-            },
-            { threshold: 0.2 }
-        );
 
-        if (contactRef.current) {
-            observer.observe(contactRef.current);
-        }
-
-        return () => {
-            if (contactRef.current) {
-                observer.unobserve(contactRef.current);
-            }
-        };
-    }, []);
+    const [contactRef, isVisible] = useInView({ threshold: 0.3 });
+    const [contentRef, contentVisible] = useInView({ threshold: 0.3 });
 
     return (
         <div className='contact__background'>
             <section className='section'>
-                <div className={`Contact ${isMerged ? 'merged' : ''}`} ref={contactRef} >
-                    <div className='contact__content'>
+                <div className='contact__container'>
+
+
+                    <div
+                        ref={contentRef}
+                        className={`contact__content ${isVisible ? 'is-visible' : ''}`}
+                    >
                         <div className="information">
                             <h3>Informations de contact</h3>
                             <div className='info'>
@@ -50,18 +36,25 @@ const Contact = ({ contactEmail, contactPhone, contactLocalisation }) => {
                                 <p><span className='item'>Localisation</span><br />{contactLocalisation}</p>
                             </div>
                         </div>
+
                         <div className="contact__form">
                             <ContactForm />
                         </div>
                     </div>
-                    <div className='contact'>
+
+
+
+
+                    <div
+                        ref={contactRef}
+                        className={`contact ${isVisible ? 'is-visible' : ''}`}
+                    >
                         <h2>Contactez-moi</h2>
-                        <p >
+                        <p>
                             Vous avez une question ou souhaitez en savoir plus sur mes programmes ?
                             N'hésitez pas à me contacter.
                         </p>
                     </div>
-
 
                 </div>
             </section>
