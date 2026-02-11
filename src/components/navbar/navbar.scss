@@ -4,11 +4,11 @@
   left: 0;
   right: 0; // Étend le conteneur sur toute la largeur
   z-index: 1000;
-  padding: 0; 
+  padding: 0;
   box-sizing: border-box;
   color: black;
   transition: background-color 0.5s ease, box-shadow 0.5s ease-in-out;
-
+  height: 90px;
 
   &.scrolled {
     backdrop-filter: blur(6px);
