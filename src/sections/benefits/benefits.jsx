@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './benefits.scss';
-import benefitsImg from "@images/benefits__img.webp";
+import benefitsImg from "@images/benefits__img.jpg";
 import { useInView } from '@hooks/useInView';
 
 
