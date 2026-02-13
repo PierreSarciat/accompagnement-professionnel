@@ -1,5 +1,7 @@
+@use "@styles/variables.scss" as *;
+
 .about__background {
-    background-color: white;
+    background-color: $section1__background__color;
 
     .about__content {
         display: grid;

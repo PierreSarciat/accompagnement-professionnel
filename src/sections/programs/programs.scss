@@ -1,5 +1,8 @@
+@use "@styles/variables.scss" as *; 
+
+
 .programs__background {
-    background-color: white;
+    background-color:$section1__background__color;
 
 
 

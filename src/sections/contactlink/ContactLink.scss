@@ -1,9 +1,12 @@
+@use "@styles/variables.scss" as *;
+
 .ContactLink__background {
-  background-color: rgb(242, 242, 242);
+  background-color: $section2__background__color;
   padding: 30px;
 
 
   .ContactLink__content {
+    background-color: $section1__background__color;
     margin: 0 auto;
     max-width: 1240px;
     display: flex;
@@ -11,7 +14,11 @@
     align-items: center;
     padding: 20px 0 30px;
     border-bottom-left-radius: 60px;
-    border: 1px solid black;
+   box-shadow:
+  0 10px 30px rgba(0, 0, 0, 0.08),
+  0 4px 10px rgba(0, 0, 0, 0.04);
+
+
 
 
     h1,

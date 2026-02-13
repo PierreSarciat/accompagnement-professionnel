@@ -1,5 +1,7 @@
+@use "@styles/variables.scss" as *;
+
 .benefits__background {
-    background-color: rgb(242, 242, 242);
+    background-color: $section2__background__color;
 
     .benefits__content {
         display: grid;

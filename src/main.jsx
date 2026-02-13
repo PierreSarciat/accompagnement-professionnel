@@ -8,7 +8,8 @@ import Contact from "@section/contact/contact.jsx";
 import Mention from "@section/mentions__legales/mentions__legales.jsx"
 
 import "@styles/global.scss";
-import "@styles/animations.scss"
+import "@styles/animations.scss";
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
