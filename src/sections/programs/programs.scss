@@ -1,8 +1,8 @@
-@use "@styles/variables.scss" as *; 
+@use "@styles/variables.scss" as *;
 
 
 .programs__background {
-    background-color:$section1__background__color;
+    background-color: $section1__background__color;
 
 
 
@@ -20,6 +20,10 @@
 
             &__image {
                 width: 80%;
+            }
+
+            &__title {
+                color: $color__title;
             }
 
             &__title,
@@ -40,11 +44,12 @@
                         animation: slideRight 0.8s ease-out forwards;
                         animation-delay: 0.5s;
                     }
-                }
 
-                &__subtitle {
-                    animation: slideUp 0.5s ease-out forwards;
-                    animation-delay: 0.2s;
+
+                    &__subtitle {
+                        animation: slideUp 0.5s ease-out forwards;
+                        animation-delay: 0.2s;
+                    }
                 }
             }
         }

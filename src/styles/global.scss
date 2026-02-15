@@ -25,7 +25,7 @@ main {
 
 
 .main-container {
-    width: 100vw;
+    /*width: 100vw;*/
     background-image: url('@images/backgroundimage.jpg');
     background-size: cover;
     background-position: center;
@@ -39,7 +39,7 @@ main {
   min-height: 100vh; 
   display: flex;
   justify-content: center; 
-  align-items: center; 
+  /*align-items: center; */
   padding: 50px; 
   box-sizing: border-box; 
  /* width: 100%;  Largeur complète */
