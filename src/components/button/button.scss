@@ -1,3 +1,5 @@
+@use "@styles/variables.scss" as *;
+
 .button {
   padding: 1.3em 3em;
   font-size: 12px;
@@ -16,7 +18,7 @@
 }
 
 .button:hover {
-  background-color: #7a6dec4e;
+  background-color:$color__hover;
   box-shadow: 0px 15px 20px rgba(46, 55, 229, 0.259);
   color: #fff;
   transform: translateY(-7px);

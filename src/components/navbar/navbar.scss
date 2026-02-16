@@ -20,17 +20,13 @@
   &.out-of-hero {
 
     ul{
-      color: $color__title;
+      color: black;
     }
    
 
    
   }
 
-  a {
-    color: inherit;
-    transition: color 0.3s ease;
-  }
 }
 
 nav {
@@ -67,8 +63,6 @@ li {
   gap: 2.5em;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.3s ease;
+a:hover{
+  color: $color__hover;
 }
