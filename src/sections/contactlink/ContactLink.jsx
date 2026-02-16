@@ -8,11 +8,10 @@ const ContactLink = () => {
     const [ref, isVisible] = useInView({ threshold: 0.3 });
     return (
         <section>
-            <div className='ContactLink__background'>
+            <div className='ContactLink__background' id="contact">
                 <div
                     ref={ref}
                     className={`ContactLink__content ${isVisible ? 'is-visible' : ''}`}
-                    id="contact"
                 >
                     <h1>Vous préparer seul est possible.
                         Être accompagné change tout.</h1>

@@ -1,48 +1,83 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import './navbar.scss';
-import logo from '@logo/logo.png';
+import "./navbar.scss";
+import logo from "@logo/logo.png";
 
-
+const sections = ["programs", "benefits", "about", "contact"];
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
-    const location = useLocation();
     const [outOfHero, setOutOfHero] = useState(false);
-
-    const handleScroll = () => {
-        const scrollY = window.scrollY;
-
-        const hero = document.querySelector('.herobackground');
-        const heroHeight = hero ? hero.offsetHeight : 0;
-
-        setScrolled(scrollY > 0);
-        setOutOfHero(scrollY > heroHeight - 10);
-    };
+    const [activeSection, setActiveSection] = useState("");
+    const location = useLocation();
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
+        const hero = document.querySelector(".herobackground");
+
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 0);
+
+            const heroHeight = hero ? hero.offsetHeight : 0;
+            setOutOfHero(window.scrollY > heroHeight - 10);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(entry.target.id);
+                    }
+                });
+            },
+            {
+                root: null,
+                rootMargin: "-120px 0px -50% 0px",
+                threshold: 0.1,
+            }
+        );
+
+        sections.forEach((id) => {
+            const section = document.getElementById(id);
+            if (section) observer.observe(section);
+        });
+
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener("scroll", handleScroll);
+            observer.disconnect();
         };
     }, []);
 
     const scrollToSection = (sectionId) => {
-        if (location.pathname !== '/') {
-            // Si on est sur une autre page, on navigue d'abord vers la page d'accueil
+        if (location.pathname !== "/") {
             return `/#${sectionId}`;
-        } else {
-            // Si on est déjà sur la page d'accueil, on fait défiler vers la section
-            const element = document.getElementById(sectionId);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
-            return '#';
+        }
+
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
         }
     };
 
+    const renderLink = (id, label) => (
+        <a
+            href={`#${id}`}
+            className={activeSection === id ? "active" : ""}
+            onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(id);
+            }}
+        >
+            {label}
+        </a>
+    );
+
     return (
-        <div className={`navbar-container ${scrolled ? 'scrolled' : ''} ${outOfHero ? 'out-of-hero' : ''}`}>
+        <div
+            className={`navbar-container ${scrolled ? "scrolled" : ""} ${outOfHero ? "out-of-hero" : ""
+                }`}
+        >
             <nav>
                 <ul>
                     <div className="nav1">
@@ -55,38 +90,12 @@ const Navbar = () => {
                     </div>
 
                     <div className="nav2">
+                        <li>{renderLink("programs", "Programme")}</li>
+                        <li>{renderLink("benefits", "Avantages")}</li>
+                        <li>{renderLink("about", "Qui suis-je")}</li>
                         <li>
-                            {location.pathname === '/' ? (
-                                <a href="#programs" onClick={(e) => { e.preventDefault(); scrollToSection('programs'); }}>
-                                    Programme
-                                </a>
-                            ) : (
-                                <NavLink to={scrollToSection('programs')}>Programme</NavLink>
-                            )}
-                        </li>
-                        <li>
-                            {location.pathname === '/' ? (
-                                <a href="#benefits" onClick={(e) => { e.preventDefault(); scrollToSection('benefits'); }}>
-                                    Avantages
-                                </a>
-                            ) : (
-                                <NavLink to={scrollToSection('benefits')}>Avantages</NavLink>
-                            )}
-                        </li>
-                        <li>
-                            {location.pathname === '/' ? (
-                                <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>
-                                    Qui suis-je
-                                </a>
-                            ) : (
-                                <NavLink to={scrollToSection('about')}>Qui suis-je</NavLink>
-                            )}
-                        </li>
-                        <li>
-                            {location.pathname === '/' ? (
-                                <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>
-                                    Contact
-                                </a>
+                            {location.pathname === "/" ? (
+                                renderLink("contact", "Contact")
                             ) : (
                                 <NavLink to="/contact">Contact</NavLink>
                             )}
