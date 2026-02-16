@@ -3,13 +3,21 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import './navbar.scss';
 import logo from '@logo/logo.png';
 
+
+
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
+    const [outOfHero, setOutOfHero] = useState(false);
 
     const handleScroll = () => {
         const scrollY = window.scrollY;
+
+        const hero = document.querySelector('.herobackground');
+        const heroHeight = hero ? hero.offsetHeight : 0;
+
         setScrolled(scrollY > 0);
+        setOutOfHero(scrollY > heroHeight - 10);
     };
 
     useEffect(() => {
@@ -34,7 +42,7 @@ const Navbar = () => {
     };
 
     return (
-        <div className={`navbar-container ${scrolled ? 'scrolled' : ''}`}>
+        <div className={`navbar-container ${scrolled ? 'scrolled' : ''} ${outOfHero ? 'out-of-hero' : ''}`}>
             <nav>
                 <ul>
                     <div className="nav1">
