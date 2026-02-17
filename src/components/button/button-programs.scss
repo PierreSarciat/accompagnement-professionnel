@@ -1,9 +1,14 @@
- .buttonP{
-  /*color: var(--paragraph-text-gray);*/
-  background-color: #0000;
-  border: 1px solid #d0d5dd;
+@use "@styles/variables.scss" as *;
+
+ .buttonP{ 
+  border: 1px solid #42403A;
   border-radius: 50px;
   padding: 8px 30px;
   font-size: 20px;
   font-weight: 400;
+}
+
+.buttonP:hover{
+   border: 1px solid $color__hover;
+   
 }

@@ -14,7 +14,8 @@ main {
   scroll-behavior: smooth;
   margin: 0 auto;
   line-height: 1.6;
-  font-family: Arial, sans-serif;
+ font-family: 'Inter', sans-serif;
+  font-weight: 400;
   
 }
 
@@ -39,7 +40,7 @@ main {
   min-height: 100vh; 
   display: flex;
   justify-content: center; 
-  /*align-items: center; */
+  align-items: center; 
   padding: 50px; 
   box-sizing: border-box; 
  /* width: 100%;  Largeur complète */
@@ -49,4 +50,11 @@ main {
     color: inherit;
     text-decoration: none;
     transition: color 0.3s ease;
+    font-weight: 500;
   }
+
+  h1, h2 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.02em;
+}
+

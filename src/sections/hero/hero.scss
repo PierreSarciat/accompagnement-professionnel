@@ -1,10 +1,6 @@
-.herobackground {
-
-
-
-
     .hero__content {
         display: grid;
+        margin-top: -100px;
         max-width: 1240px;
         grid-template-columns: 1fr 1fr;
         height: 100%;
@@ -60,7 +56,7 @@
 
 
     }
-}
+
 
 
 .herobackground::before {
