@@ -80,7 +80,7 @@ const ContactForm = () => {
                         required
                     />
                 </div>
-                <button type="submit" disabled={isSubmitting}>
+                <button type="submit" className='button' disabled={isSubmitting}>
                     {isSubmitting ? 'Envoi en cours...' : 'Envoyer'}
                 </button>
                 {submitStatus === 'success' && (

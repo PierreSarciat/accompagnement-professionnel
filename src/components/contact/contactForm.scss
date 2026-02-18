@@ -1,8 +1,6 @@
-
-
 .contact-form {
   max-width: 600px;
-  
+
 
 
   .form-group {
@@ -11,10 +9,11 @@
     label {
       display: block;
       margin-bottom: 0.5rem;
-     
+
     }
 
-    input, textarea {
+    input,
+    textarea {
       width: 100%;
       padding: 0.75rem;
       border: 1px solid rgba(128, 128, 128, 0.486);
@@ -31,22 +30,11 @@
   button {
     display: block;
     width: 100%;
-    padding: 0.75rem;
-    background-color:#597faf;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+
 
     &:hover {
-      background-color: blue;
-    }
-
-    &:disabled {
-      background-color: #cccccc;
-      cursor: not-allowed;
+      transform: translateY(0px);
     }
   }
 
@@ -63,10 +51,10 @@
   }
 }
 
-@media (max-width: 650px){
+@media (max-width: 650px) {
 
-.contact__container .Contact{
-  display: flex;
-  flex-direction: column;
-}
+  .contact__container .Contact {
+    display: flex;
+    flex-direction: column;
+  }
 }

@@ -1,7 +1,7 @@
 @use "@styles/variables.scss" as *;
 
  .buttonP{ 
-  border: 1px solid #42403A;
+  border: 1px solid $color__quintus;
   border-radius: 50px;
   padding: 8px 30px;
   font-size: 20px;
